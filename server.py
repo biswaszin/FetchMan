@@ -3,9 +3,9 @@ from flask import Flask, request, jsonify
 server = Flask(__name__)
 
 users = [
-    {"id": 1, "name": "Ankit", "email": "ankit@fetchman.dev", "role": "admin"},
-    {"id": 2, "name": "Sayak", "email": "sayak@fetchman.dev", "role": "user"},
-    {"id": 3, "name": "Debadrita", "email": "debadrita@fetchman.dev", "role": "user"},
+    {"id": 1, "name": "Alex", "email": "alex@fetchman.dev", "role": "admin"},
+    {"id": 2, "name": "Tarzan", "email": "tarzan@fetchman.dev", "role": "user"},
+    {"id": 3, "name": "Bruce", "email": "bruce@fetchman.dev", "role": "user"},
 ]
 
 products = [

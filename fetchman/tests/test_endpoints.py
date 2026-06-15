@@ -15,7 +15,7 @@ def test_get_users(client):
 def test_get_user(client):
     response = client.get("/users/1")
     assert response.status_code == 200
-    assert response.get_json()["name"] == "Ankit"
+    assert response.get_json()["name"] == "Alex"
 
 
 def test_get_user_not_found(client):
@@ -24,10 +24,10 @@ def test_get_user_not_found(client):
 
 
 def test_create_user(client):
-    response = client.post("/users", json={"name": "Riya", "email": "riya@fetchman.dev"})
+    response = client.post("/users", json={"name": "Reyna", "email": "reyna@fetchman.dev"})
     assert response.status_code == 201
     data = response.get_json()
-    assert data["name"] == "Riya"
+    assert data["name"] == "Reyna"
     assert data["id"] == 4
 
 
@@ -37,9 +37,9 @@ def test_create_user_missing_fields(client):
 
 
 def test_update_user(client):
-    response = client.put("/users/2", json={"name": "Sayak Biswas"})
+    response = client.put("/users/2", json={"name": "Killjoy"})
     assert response.status_code == 200
-    assert response.get_json()["name"] == "Sayak Biswas"
+    assert response.get_json()["name"] == "Killjoy"
 
 
 def test_update_user_not_found(client):
