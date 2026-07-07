@@ -1,8 +1,8 @@
 #! /usr/bin/python3
 
-from pydantic import BaseModel, HttpUrl, model_validator
-from typing import Optional, Any, Literal
 import json
+from typing import Optional, Any, Literal
+from pydantic import BaseModel, HttpUrl, model_validator
 
 HTTPMethods = Literal["GET", "POST", "PUT", "PATCH", "DELETE", "QUERY"]
 
