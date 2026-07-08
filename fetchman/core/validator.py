@@ -17,7 +17,7 @@ class RequestModel(BaseModel):
 
     @model_validator(mode="after")
     def block_request_body_on_non_body_methods(self) -> "RequestModel":
-        if self.payload and self.method not in supported_methods_list:
+        if self.payload and self.method not in send_payload_methods_list:
             raise ValueError(f"{self.method} is not supported by FetchMan")
         return self
 
