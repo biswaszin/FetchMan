@@ -37,7 +37,7 @@ def get_response_statistics(response: dict) -> dict:
         "url": response.get("url"),
         "elapsed_ms": response.get("elapsed_ms"),
         "response_size_bytes": raw_size,
-        "response_size_human": _get_response_size(raw_size),
+        "response_size_human_readable": _get_response_size(raw_size),
         "content_type": response.get("content_type"),
         "redirects": response.get("redirects"),
         "timestamp": response.get("timestamp"),
