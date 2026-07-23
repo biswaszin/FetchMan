@@ -68,6 +68,12 @@ python server.py
 
 The server starts at `http://localhost:5000`.
 
+**4. Run the TUI**
+
+```bash
+python -m fetchman.tui
+```
+
 ---
 
 ## Project Structure
